@@ -90,7 +90,7 @@ bool ConnectWifi(void)
 
   // try to connect WPA
   WiFi.begin(currentWifi.ssid, currentWifi.password);
-  WiFi.setHostname(ESP_NAME);
+  WiFi.hostname(ESP_NAME);
   Serial.println("");
   Serial.print("Connecting to WiFi ");
   Serial.println(currentWifi.ssid);
