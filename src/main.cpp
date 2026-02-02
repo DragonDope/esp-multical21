@@ -161,7 +161,7 @@ bool mqttConnect()
   Serial.println(currentWifi.mqtt_broker);
 
   // use given MQTT broker
-  mqttClient.setServer(currentWifi.mqtt_broker, 1883);
+  mqttClient.setServer(currentWifi.mqtt_broker, currentWifi.mqttPort);
     
   // connect client with retainable last will message
   if (strlen(currentWifi.mqtt_username) && strlen(currentWifi.mqtt_password))

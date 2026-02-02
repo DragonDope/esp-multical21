@@ -22,8 +22,9 @@
 // if you dont need user/pass for MQTT, leave it empty ("")
 struct CREDENTIAL {
     char const* ssid;           // Wifi ssid
-    char const* password;	      // Wifi password
-    char const* mqtt_broker;		// MQTT broker ip address
+    char const* password;	    // Wifi password
+    char const* mqtt_broker;	// MQTT broker ip address
+    int mqttPort;        // MQTT broker port
     char const* mqtt_username;	// MQTT username
     char const* mqtt_password;	// MQTT password
 };
@@ -32,8 +33,8 @@ struct CREDENTIAL {
 // "ssid", "wifi_passphrase", "mqtt_broker", "mqtt_username", "mqtt_password"
 std::vector<CREDENTIAL> const credentials = {
      { "ssid1", "********", "", "", ""}   // no MQTT
-   , { "ssid2", "********", "10.14.0.1", "", ""} // MQTT without auth
-   , { "ssid3", "********", "10.0.0.111", "mqttuser", "********"}  // MQTT with auth
+   , { "ssid2", "********", "10.14.0.1", 1883, "", ""} // MQTT without auth
+   , { "ssid3", "********", "10.0.0.111", 1883, "mqttuser", "********"}  // MQTT with auth
 };
 
 #if defined(ESP8266)
