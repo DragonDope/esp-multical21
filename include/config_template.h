@@ -32,7 +32,7 @@ struct CREDENTIAL {
 // more than one wifi credentials are supported, upper one wins
 // "ssid", "wifi_passphrase", "mqtt_broker", "mqtt_username", "mqtt_password"
 std::vector<CREDENTIAL> const credentials = {
-     { "ssid1", "********", "", "", ""}   // no MQTT
+     { "ssid1", "********", "", 1883, "", ""}   // no MQTT
    , { "ssid2", "********", "10.14.0.1", 1883, "", ""} // MQTT without auth
    , { "ssid3", "********", "10.0.0.111", 1883, "mqttuser", "********"}  // MQTT with auth
 };
